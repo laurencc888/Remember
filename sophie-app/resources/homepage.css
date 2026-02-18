@@ -1,0 +1,240 @@
+/* colors */
+:root {
+  --blue: #A2B7CF;
+  --fuchsia: #BD586B;
+  --orange: #E97841;
+  --light-green: #C8CD66;
+  --dark-green: #616230;
+  --white: #FAD7BD;
+  --purple: #918ABD;
+  --brown: #BD8F58;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--brown);
+  box-shadow: inset 0 0 0 2px var(--dark-green);
+}
+
+.window-bar-container {
+  width: 279px;
+  height: 32px;
+
+  /* remember to delete this */
+  background-color: red;
+
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  color: var(--white);
+  font-family: "Pixelify Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.page-title {
+  width: 210px; 
+  height: 32px;
+  flex-shrink: 0;
+
+  /* background-color: darkblue;  */
+
+  margin: 0;
+  position: absolute; 
+  top: 12px; 
+  left: 16px;
+
+  color: var(--white);
+  font-family: "Pixelify Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.window-bar-button {
+  width: 26px;
+  height: 26px;
+
+  background-color: var(--orange);
+  border: 2px solid var(--fuchsia);
+  border-color: var(--fuchsia);
+  padding: 0;
+
+  position: absolute;
+
+  /* text: _ x */
+  color: var(--white, #FAD7BD);
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.window-bar-button:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  top: 15px;
+  right: 15px;
+  line-height: 0;
+  padding-bottom: 6px;
+}
+
+.minimize-button {
+  top: 15px;
+  right: 46px;
+  line-height: 0;
+  padding-bottom: 4px;
+}
+
+.back-button {
+  top: 15px;
+  right: 77px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.start-button {
+  display: none;
+
+  width: 116px;
+  height: 29px;
+
+  background-color: var(--fuchsia);
+  border: 2px solid var(--dark-green);
+
+  position: absolute;
+  top: 266px;
+  left: 82px;
+
+  /* text */
+  color: var(--white);
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.start-button:hover {
+  cursor: pointer;
+}
+
+.main-container {
+  width: 280px;
+  height: 335px;
+
+  background-color: var(--light-green);
+
+  position: absolute;
+  top: 48px;
+  left: 15px;
+}
+
+.moment-text {
+  width: 221px;
+  height: 19px;
+
+  position: relative;
+  top: 33px;
+  left: 29px;
+  margin: 0;
+
+  color: var(--dark-green);
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.candles {
+  position: absolute;
+  top: 71px;
+  left: 83px;
+}
+
+.cake {
+  position: absolute;
+  top: 97px;
+  left: 47px;
+}
+
+.candle-flicker {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.left-candle {
+  animation-name: left-candle;
+}
+
+.middle-candle {
+  animation-name: middle-candle;
+}
+
+.right-candle {
+  animation-name: right-candle;
+}
+
+@keyframes left-candle {
+  0% {opacity: 0.30;}
+  12.5% {opacity: 0.50;}
+  25% {opacity: 0.70;}
+  37.5% {opacity: 0.90;}
+  50% {opacity: 0.70;}
+  62.5% {opacity: 0.50;}
+  75% {opacity: 0.30;}
+  87.5% {opacity: 0.10;}
+  100% {opacity: 0.30;}
+}
+
+@keyframes middle-candle {
+  0% {opacity: 0.70;}
+  12.5% {opacity: 0.90;}
+  25% {opacity: 0.70;}
+  37.5% {opacity: 0.50;}
+  50% {opacity: 0.30;}
+  62.5% {opacity: 0.10;}
+  75% {opacity: 0.30;}
+  87.5% {opacity: 0.50;}
+  100% {opacity: 0.70;}
+}
+
+@keyframes right-candle {
+  0% {opacity: 0.10;}
+  12.5% {opacity: 0.30;}
+  25% {opacity: 0.50;}
+  37.5% {opacity: 0.70;}
+  50% {opacity: 0.90;}
+  62.5% {opacity: 0.70;}
+  75% {opacity: 0.50;}
+  87.5% {opacity: 0.30;}
+  100% {opacity: 0.10;}
+}
+
+.button-fade-in {
+  display: block;
+
+  animation: fade-in 2.5s linear forwards;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
