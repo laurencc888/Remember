@@ -1,0 +1,13 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-text {
+    color: var(--dark-green);
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 64px;
+    margin: 0;
+    text-align: center;
+}

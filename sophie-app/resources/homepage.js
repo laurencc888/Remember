@@ -17,19 +17,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // loading in the text
     const element = document.querySelector('.moment-text');
-    element.textContent = '';
-    setTimeout(() => {
-        typeWriter("Take a moment for yourself.", element);
-    }, 800);
+    if (!element) {
+        return; // or console.warn(...)
+    }
+    else {
+        element.textContent = '';
 
-    // load button after text is loaded
-    setTimeout(() => {
-        document.getElementById('startBtn').classList.add("button-fade-in");
-    }, 4000);
+        setTimeout(() => {
+            typeWriter("Take a moment for yourself.", element);
+        }, 800);
+
+        // load button after text is loaded
+        setTimeout(() => {
+            document.getElementById('startBtn').classList.add("button-fade-in");
+        }, 4000);
+    }
+
+    document.getElementById("startBtn")?.addEventListener("click", () => {
+    console.log("Let's Go clicked");
+    window.location.assign("/timer.html");
+    });
+
 });
 
 function toTimer() {
-    window.location.href = "timer.html";
+    window.location.href = "/timer.html";
 }
 
 // recursive function (perhaps the first time i've used one fr)

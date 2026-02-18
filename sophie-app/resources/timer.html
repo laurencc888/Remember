@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Menu!</title>
-        <link rel="stylesheet" href="homepage.css">
-        <link rel="stylesheet" href="timer.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap">
-        <script src="js/neutralino.js"></script>
-        <script src="homepage.js"></script>
-    </head>
-    <body>
-        <div class="page-container">
-            <p class="page-title">Breathe <3</p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu!</title>
 
-            <button class="window-bar-button close-button" id="closeBtn">
-                x
-            </button>
-            <button class="window-bar-button minimize-button" id="minBtn">
-                _
-            </button>
-            <button class="window-bar-button back-button" id="backBtn" onclick="toHome()">
-                <<
-            </button>
-            <div class="main-container">
-                <p class="countdown-text"></p>
-            </div>
-        </div> 
-        <script src="timer.js"></script>
-    </body>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="timer.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" />
+
+    <script src="js/neutralino.js"></script>
+    <script src="timer.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <p class="page-title">Breathe &lt;3</p>
+
+      <button class="window-bar-button close-button" id="closeBtn">x</button>
+      <button class="window-bar-button minimize-button" id="minBtn">_</button>
+      <button class="window-bar-button back-button" id="backBtn" onclick="toHome()">&lt;&lt;</button>
+
+      <div class="main-container">
+        <p class="countdown-text"></p>
+      </div>
+    </div>
+  </body>
 </html>
